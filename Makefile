@@ -10,8 +10,5 @@ build:
 	docker build -t $(DOCKER_LOCATOR) .
 	docker tag $(DOCKER_LOCATOR) $(DOCKER_LOCATOR_LATEST)
 
-dev:
-	docker run -it --rm -v $PWD/app:/app -v $PWD/config.yml:/app/config.yml $(DOCKER_LOCATOR_LATEST)
-
 run:
-	docker run -it --rm -v $PWD/config.yml:/app/config.yml $(DOCKER_LOCATOR)
+	docker run -it --rm $(DOCKER_LOCATOR)

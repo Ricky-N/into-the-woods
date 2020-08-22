@@ -1,4 +1,4 @@
-FROM chekote:gulp
+FROM chekote/gulp
 ADD app/ /app
 WORKDIR /app
 
@@ -16,4 +16,4 @@ WORKDIR /app/base-game
 RUN npm install
 
 # A gulp task executes the FE
-CMD ["gulp", "server"]
+CMD ["gulp server"]
