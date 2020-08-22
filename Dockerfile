@@ -8,12 +8,14 @@ RUN git clone https://github.com/irrelon/ige.git
 RUN git clone https://github.com/Ricky-N/base-game.git
 
 # Install engine dependencies
-WORKDIR /app/ige
+WORKDIR /app/ige/server
 RUN npm install
 
 # Install FE dependencies
 WORKDIR /app/base-game
 RUN npm install
+
+EXPOSE 8000/tcp
 
 # A gulp task executes the FE
 CMD ["gulp server"]
