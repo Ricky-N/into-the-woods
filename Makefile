@@ -11,7 +11,7 @@ build:
 	docker tag $(DOCKER_LOCATOR) $(DOCKER_LOCATOR_LATEST)
 
 quickbuild:
-	docker build --no-cache -t $(DOCKER_LOCATOR) .
+	docker build -t $(DOCKER_LOCATOR) .
 	docker tag $(DOCKER_LOCATOR) $(DOCKER_LOCATOR_LATEST)
 
 run:
