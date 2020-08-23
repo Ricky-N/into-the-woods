@@ -16,6 +16,6 @@ WORKDIR /app/base-game
 RUN npm install
 
 EXPOSE 8000/tcp
+EXPOSE 2000/tcp
 
-# A gulp task executes the FE
-CMD ["gulp server"]
+CMD ["cd /app/base-game && gulp server"]
