@@ -11,4 +11,4 @@ build:
 	docker tag $(DOCKER_LOCATOR) $(DOCKER_LOCATOR_LATEST)
 
 run:
-	docker run -p 8000:8000/tcp -it --rm $(DOCKER_LOCATOR)
+	docker run -p 8000:8000/tcp -p 2000:2000/tcp -it --rm $(DOCKER_LOCATOR)
