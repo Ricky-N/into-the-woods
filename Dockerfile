@@ -14,6 +14,7 @@ RUN npm install
 # Install FE dependencies
 WORKDIR /app/base-game
 RUN npm install
+RUN gulp build
 
 EXPOSE 8000/tcp
 EXPOSE 2000/tcp

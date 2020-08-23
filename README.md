@@ -4,4 +4,8 @@ In 2015 I built a multiplayer game that I called [Into The Woods](https://github
 I wanted to revisit the game, but I honestly couldn't figure out how to deploy the thing again -- I had only documented developer mode. This project is based on my updated deployability strategy -- build things up into a Docker container that I publish to my personal artifact repository, and deploy it onto my Docker Swarm.
 
 # Build
-make build
+1. `make build`
+2. `make run`
+3. visit `https://localhost:8000/devIndex.html`
+
+Note, I can't get the "production" deploy of this working, but it's just not worth it right now. :)
