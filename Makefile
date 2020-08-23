@@ -7,7 +7,7 @@ DOCKER_LOCATOR = $(DOCKER_REGISTRY)/$(DOCKER_LABEL):$(TAG)
 DOCKER_LOCATOR_LATEST = $(DOCKER_REGISTRY)/$(DOCKER_LABEL):latest
 
 build:
-	docker build -t $(DOCKER_LOCATOR) .
+	docker build --no-cache -t $(DOCKER_LOCATOR) .
 	docker tag $(DOCKER_LOCATOR) $(DOCKER_LOCATOR_LATEST)
 
 run:
